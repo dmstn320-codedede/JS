@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let month = 2
+
+        switch(month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                console.log(`${month}월은 31일 까지 있습니다.`);
+            break;
+            case 2:
+                console.log(`${month}월은 28일 까지 있습니다.`);
+            break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                console.log(`${month}월은 30일 까지 있습니다.`);
+            break
+            default:
+                console.log(`범위내의 숫자가 아니거나 잘못 입력하셨습니다.
+                1~12사이의 숫자를 입력해주십시오.`);
+        }
+
+        let score = 48;
+
+        if (score < 0 || score >100){
+        console.log(`등급이 나오지 않았습니다. 옳바른 점수를 등록해 주세요.`);;
+        
+        }else if (score >= 90){
+        console.log(`당신의 등급은 A 입니다.`);
+        }else if (score >= 80){
+        console.log(`당신의 등급은 B 입니다.`);
+        }else if (score >= 70){
+        console.log(`당신의 등급은 C 입니다.`);        
+        }else if (score >= 60){
+        console.log(`당신의 등급은 D 입니다.`);  
+        }else
+        console.log(`당신의 등급은 F 입니다.`); 
+
+        let year = 2025;
+        if((year %4 === 0 && year % 100 !== 0) || year % 400 ===0) {
+            console.log(`${year}은 윤년입니다.`); 
+        }else{
+            console.log(`${year}은 윤년이 아닙니다.`); 
+        }
+
+        let menu = 3;
+
+        switch(menu){
+            case 1:
+                console.log(`아메리카노 1500원 입니다.`);
+                break;
+            case 2:
+                console.log(`라떼 2000원 입니다.`);
+                break;
+            case 3:
+                console.log(`녹차 1800원 입니다.`);
+                break;
+            default:
+                console.log(`유효한 번호가 아닙니다. 다시 입력해 주세요. `);
+        }
+
+        // 
+        let time = 3;
+
+        // if문
+        // if(time <  || score >100)
+        
+        // 스위치(switch)
+        switch(time){
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+                console.log(`좋은 아침입니다.`);
+                break;
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+            case 16:
+            case 17:
+                console.log(`좋은 오후입니다.`);
+                break;
+            case 18:
+            case 19:
+            case 20:
+            case 21:
+                console.log(`좋은 저녁입니다.`);
+                break;
+            default:
+                console.log(`좋은 밤입니다.`);
+        }
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

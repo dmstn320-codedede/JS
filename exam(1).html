@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let basketBalls = 25; 
+        let box = 4;
+
+        // 공의 개수가 4의 배수면 남는 공이 없음
+
+        // 공의 개수가 4의 배수가 아니면 박스가 한 개
+        // 더 필요하다
+        
+        box = (basketBalls % 4 === 0) ? basketBalls/4 : parseInt(basketBalls/4)+1;
+        console.log("박스의 개수 :" + box + "개");
+
+                let age = 9 ;
+        let ticketPrice = 12000;
+
+        // 나이에 따라 티켓 가격이 출력되는 코드 작성하기
+        // 학생은 20% 할인, 성인은 정가
+        let moviePrice = age<19 ? ticketPrice * 0.8 : ticketPrice;
+        console.log(`${age}살의 티켓 가격은${moviePrice}원 입니다.`);
+
+        // 주문금액이 30,000원 이상이거나 VIP회원이라면 무료 배송이다
+        // 주문금액: 28,000원
+        // VIP : True
+        // 무료배송인지 아닌지 예측하여 출력하세요.
+        let costPrice = 28000;
+        let VIP = true;
+
+        let freeDelivery = (costPrice >= 30000) || (VIP === true);
+        console.log(freeDelivery);
+
+        
+        let temerature = 23;
+        let mode = (temerature >= 28) ? "에어컨 작동":
+                   (temerature <= 18) ? "난방 작동": "대기상태";
+                   console.log(`현재 에어컨의 상태는${mode}모드 입니다.`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
