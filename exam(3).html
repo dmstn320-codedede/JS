@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> 
+        let oddnumber = 0;
+        let evennumber = 0;
+        //  1부터 28까지 순회
+        for(let i = 1; i <=28; i++){     
+           if (i % 2 === 0 ) {
+           evennumber++;
+           }
+           else
+           oddnumber++;
+        }
+        
+        console.log('홀수 개수:', oddnumber);
+        console.log('짝수 개수:', evennumber);
+
+        // 구구단 n단을 1부터 9까지 출력하되 짝수는 건너뛰고 홀수만 출력
+        let dan = 3;
+        for(let i = 1; i <=9; i++){
+            if (i % 2 === 0 ){ continue;
+            }
+            console.log(`${dan}X${i}=${3*i}`)
+        }
+
+        // 1부터 45까지의 수 중 3의 배수를 제외하고 합게와 평
+        // 균을 구한다
+        
+        let sum = 0;
+        let another = 0;
+
+        for(let i = 1; i < 46; i++){
+            if (i % 3 === 0)continue;
+            sum += i;
+            another++; //개수 셀때는 하나씩
+            }
+            let avg = (sum/another);
+
+            console.log("합계:",sum);
+            console.log("평균:",avg);
+
+        let N = 12030;
+        let reverse = 0;
+        while(N > 0){
+            let digit = N % 10; //나머지(마지막자리)
+            reverse = reverse*10 + digit;
+            N = parseInt(N / 10);
+        }
+        console.log("출력:",reverse);
+
+
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
