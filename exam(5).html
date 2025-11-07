@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 학생의 이름(name), 나이(age), 전공(major)
+        // 속성으로 가지는 student 객체를 만들고 
+        // 콘솔에 각 값을 출력하세요
+        
+        // 객체 만들기
+        let student = {
+            name : "박은수",
+            age  : 25,
+            major : 'mechateonics'
+        };
+        // 값 출력
+        console.log(student['name']);
+        console.log(student.major);
+        console.log('--------------------------------');
+
+        const car = {brand : "Hyundai" , model : "Sonata"};
+
+        car.year = "2024"; // year 추가
+        car.model = "Avante"; // 모델명 바꾸기
+        
+        console.log(car.year);
+        console.log(car['model']);
+        console.log('--------------------------------');
+        // year 속성을 추가하여 값 2024 저장하기
+        // model 속성을 'Avante'로 수정하기
+
+        const scores = {kor : 85, eng :90, math : 78};
+        
+        //for - in을 사용하여 과목명과 점수를 다음 형식으로 
+        // 출력하라
+        //kor : 85
+        //eng : 90
+        //math : 78
+
+        // for in 문 작성
+        for(const k in scores){
+            // 키를 불러와서 출력.
+            console.log(`key = ${k} / value= ${scores[k]}`);
+        }
+        console.log('--------------------------------');
+
+        const users = [ 
+            {name:"kim",age:20},
+            {name:"lee",age:25},
+            {name:"park",age:30}
+        ];
+        //모든 사용자의 이름만 출력하기
+        //나이가 25세 이상인 사용자만 출력하기
+        // 모든 사용자의 평균 나이 구하기
+
+        for(let i = 0; i < users.length; i++){
+            console.log(users[i].name)
+        }
+        
+        for(const v of users){
+        console.log(v.name);
+        }
+
+        users.forEach(x => console.log(x.name))
+
+        for(const v of users){
+            if(v.age >= 25){
+                console.log(v);
+            }
+        }   
+
+        console.log(users.filter(x => x.age >=25));
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

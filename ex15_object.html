@@ -22,14 +22,58 @@
 
         // 코리아 학생 객체
         // 이름, 나이, 전화번호,듣는과목, 수료 여부(t/f)
-        let korean_studernt = {
+        let korean_student = {
         name : "박은수",
         age : 25,
         phoneNumber : "010-5555-5555",
-        subject : math,science,
-        completeention : true 
+        subject : ["Java&python 풀스텍, React기반 풀스텍"],
+        completention : true 
     }
-    console.log(korean_studernt);
+    
+    // 객체에 들어있는 값을 꺼내기
+    //변수명.키 
+    console.log(korean_student.name);
+    //변수명.["키"] 
+    console.log(korean_student["age"]);
+    // console.log(korean_student[age]); X -> 키를 항상 문자열로 묶어야됨
+
+    // 프로퍼티에 들어있는 value 수정하기
+    korean_student.name = "침착맨";
+    console.log(korean_student.name);
+
+    // 객체에 없는 프로퍼티도 추가할 수 있다.
+    korean_student.height = 172.8;
+    console.log(korean_student["height"]);
+
+    // 객체에서 프로퍼티 삭제하기
+    delete korean_student.completention;
+    console.log(korean_student.completention);
+
+    console.log('completention' in korean_student);
+    console.log(`이름 존재 여부: ${'name' in korean_student}`);
+
+    // for in 
+    // 객체를 순회하면서 모든 프로퍼티의 키를 변수에 담아서 준다.
+    for(const k in korean_student){
+        console.log(`key = ${k} / value= ${korean_student[k]}`);
+    }
+
+    // 생성자
+    // 객체를 생성하는 특수한 기능을 가진 함수
+    // 원래 함수 이름은 소문자로 시작
+    // 생성자는 대문자로 시작
+    function User(name,age){
+        this.name = name;
+        this.age = age;
+    }
+
+    // 생성자의 사용
+    let u1 =new User("홍길동", 20);
+
+    // 이름과 나이를 출력
+    console.log(`이름: ${u1.name} /나이ㅣ${u1.age}`);
+
+    
     </script>
 </head>
 <body>

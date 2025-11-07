@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 메서드
+        // 객체 안에서 정의된 함수
+        // 다른 프로퍼티처럼 객체명.메서드명()을 이용해 호출을 해야한다.
+
+        // 메서드 생성 방법
+        let person = {
+            name : "홍길동",
+            age : 20,
+            introduce : function(){
+                console.log(`안녕하세요 저는 ${name}, 이고 ${age}살 입니다.`)
+            }
+        }
+        // 메서드를 사용하기위한 호출
+        person.introduce();
+    </script>
+</head>
+<body>
+</body>
+</html>
