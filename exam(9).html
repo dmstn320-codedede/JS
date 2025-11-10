@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        li{list-style: none;
+            float: left;
+            margin-left: 10px;
+        };
+        
+        ul{
+            overflow: hidden;
+        };
+    </style>
+    <script>
+        function cal(op){
+            let soo1 = Number(document.querySelector("#soo1").value);
+            let soo2 = Number(document.querySelector("#soo2").value);
+            let result = document.querySelector("#result");
+            switch(op){
+                case '+':
+                    result.value = soo1 + soo2;
+                    break;
+                case '-':
+                    result.value = soo1 - soo2;
+                    break;                    
+                case '*':
+                    result.value = soo1 * soo2;
+                    break;            
+                case '/':
+                    result.value = soo1 / soo2;           
+            }
+        }
+
+
+        let plus = document.querySelector("#+");
+        let minus = document.querySelector("#-");
+        let multi = document.querySelector("#*");
+        let div = document.querySelector("#/");
+    </script>
+</head>
+<body>
+		<table border = "1">
+			<tr>
+				<th class="soo">수1</th>
+				<td><input id="soo1" placeholder=></td>
+			</tr>
+
+			<tr>
+				<th class="soo">수2</th>
+				<td><input id="soo2" placeholder=></td>
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<ul>
+						<li><input type="button" value="+" onclick="cal('+');"></li>
+						<li><input type="button" value="-" onclick="cal('-');"></li>
+						<li><input type="button" value="*" onclick="cal('*');"></li>
+						<li><input type="button" value="/" onclick="cal('/');"></li>
+					</ul>
+				</td>
+			</tr>
+				<tr>
+					<th>결과</th>
+					<td><input id="result"></td>
+				</tr>
+		</table>
+	</body>
+</html>
