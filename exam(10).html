@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style type="css/text">
-        display{
-            width: 300px;
-            height: 300px;
-            background-color: black;
-            color: white;
-        };
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    #display {
+      width: 200px;
+      height: 250px;
+      background-color: deepskyblue;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <p>단:
-        <input id =  "dan">
-        <input type="button" value="계산 시작" id="gugu">
-        <input type="button" id = "c_display" value="숨기기">
-    </p>
-    <hr>
-    <div id = "display">구구단 시작부분
-    </div>
-    <script>
-        let clac_btn = document.querySelector("#gugu");//계산시작
+  <p>단:
+    <input id="dan">
+    <input type="button" value="계산 시작" id="gugu">
+    <input type="button" id="c_display" value="숨기기">
+  </p>
+  <hr>
+  <div id="display">구구단 시작부분</div>
 
-        let gugudan = () => {
-            // input태그의 value를 대입
-            let dan = document.querySelector("#dan").value;
-        
-            // 비어있는 값을 실행하려 할 때 
-            if(dan == ''){
-                alert("값을 입력해야 합니다.");
-                return; // 함수를 즉시 종료하고 빠져나간다.
-            
-            }
-            // 2단보다 작거나 9단보다 큰 숫자를 입력했을 경우
-            // 2~9 사이만 입력해주세요라고 alert 띄우기			
-            if(dan < 2 || dan > 9){
-				alert("2 ~ 9 사이로만 입력해 주세요");
-				return;
-			}
+  <script>
+    let calc_btn = document.querySelector("#gugu"); // 계산 시작 버튼
+    let c_disp = document.querySelector("#c_display"); // 숨기기 버튼
+    let display = document.querySelector("#display"); // 구구단 출력 div
 
-            let str = " ";
+    // 구구단 계산 함수
+    let gugudan = () => {
+      let dan = document.querySelector("#dan").value;
 
-            for(let i = 1; i<10; i++) {
-                str += `${dan} X ${i} = ${dan * i} <br>`;
-            }
-            
-            let display = document.querySelector("#display");
-            display.innerHTML = str;
-        }
+      if (dan === '') {
+        alert("값을 입력해야 합니다.");
+        return;
+      }
 
-        clac_btn.addEventListener("click", gugudan);
+      if (dan < 2 || dan > 9) {
+        alert("2 ~ 9 사이로만 입력해 주세요");
+        return;
+      }
 
-        let b_show = true;
-        
-        let show = () => {
-            b_show = !b_show;//true -> false, false -> true
-            c_disp.value = b_show ? "숨기기" : "보이기";
-            c_disp.style.display = b_show ? 'block' : 'none';
-        }
-    </script>
+      let str = "";
+      for (let i = 1; i < 10; i++) {
+        str += `${dan} X ${i} = ${dan * i}<br>`;
+      }
+
+      display.innerHTML = str;
+    };
+
+    calc_btn.addEventListener("click", gugudan);
+
+    // 보이기 / 숨기기 기능
+    let b_show = true;
+
+    let show = () => {
+      b_show = !b_show; // true → false, false → true
+      c_disp.value = b_show ? "숨기기" : "보이기";
+      display.style.display = b_show ? 'block' : 'none';
+    };
+
+    c_disp.addEventListener("click", show);
+  </script>
 </body>
 </html>
